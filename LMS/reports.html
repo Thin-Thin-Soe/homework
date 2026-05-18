@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reports</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="dashboard.css">
+
+<!-- Chart.js -->
+ 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+<script src="script.js"></script>
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        <i class="fa-solid fa-book-open"></i>
+
+        <div>
+
+            <h2>Smart Library</h2>
+
+            <span>Management System</span>
+
+        </div>
+
+    </div>
+
+    <!-- Menu -->
+
+    <ul class="menu">
+
+        <li>
+            <a href="index.html">
+
+                <i class="fa-solid fa-table-columns"></i>
+
+                Dashboard
+
+            </a>
+        </li>
+
+        <li>
+            <a href="books.html">
+
+                <i class="fa-solid fa-book"></i>
+
+                Books
+
+            </a>
+        </li>
+
+        <li>
+            <a href="members.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                Members
+
+            </a>
+        </li>
+
+        <li>
+            <a href="issue_return.html">
+
+                <i class="fa-solid fa-right-left"></i>
+
+                Issue / Return
+
+            </a>
+        </li>
+
+        <li>
+            <a href="rfid_scan.html">
+
+                <i class="fa-solid fa-wifi"></i>
+
+                RFID Scan
+
+            </a>
+        </li>
+
+        <li>
+            <a href="transactions.html">
+
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                Transactions
+
+            </a>
+        </li>
+
+        <li>
+            <a href="fines.html">
+
+                <i class="fa-solid fa-money-bill-wave"></i>
+
+                Fines
+
+            </a>
+        </li>
+
+        <li>
+            <a href="categories.html">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                Categories
+
+            </a>
+        </li>
+
+        <li>
+            <a href="users.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                Users
+
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="reports.html">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                Reports
+
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                Settings
+
+            </a>
+        </li>
+
+    </ul>
+    <!-- Welcome Card -->
+
+    <div class="bottom-card">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+        <h3>Welcome Admin</h3>
+
+        <p>
+            Manage your library resources efficiently.
+        </p>
+
+        <button class="scan-btn">
+            <i class="fa-solid fa-wifi"></i>
+            Scan RFID
+        </button>
+    </div>
+
+    <!-- Logout -->
+
+    <div class="logout-btn" id="logoutBtn">
+
+        <a href="logout.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<div class="main-content">
+
+    <!-- ================= TOP NAVBAR ================= -->
+
+    <div class="top-navbar">
+
+        <div class="search-bar">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text"
+            placeholder="Search reports...">
+
+        </div>
+
+        <div class="top-right">
+
+            <div class="notification">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>2</span>
+
+            </div>
+
+            <div class="admin-profile">
+
+                <img src="https://i.pravatar.cc/150?img=12">
+
+                <div>
+
+                    <h4>Admin</h4>
+
+                    <p>Librarian</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <h1>Reports</h1>
+
+            <p>Library reports and analytics</p>
+
+        </div>
+
+        <button class="date-btn">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            23 Apr 2025 - 23 May 2025
+
+            <i class="fa-solid fa-angle-down"></i>
+
+        </button>
+
+    </div>
+
+    <!-- ================= REPORT CARDS ================= -->
+
+    <div class="report-cards report-five">
+
+        <!-- Card 1 -->
+
+        <div class="report-card">
+
+            <div class="card-top">
+
+                <div class="icon purple">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Total Books</h4>
+
+                    <h1>2,450</h1>
+
+                </div>
+
+            </div>
+
+            <p class="green-text">
+
+                ↑ 8.5%
+
+                <span>vs last month</span>
+
+            </p>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="report-card">
+
+            <div class="card-top">
+
+                <div class="icon green">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Total Members</h4>
+
+                    <h1>1,230</h1>
+
+                </div>
+
+            </div>
+
+            <p class="green-text">
+
+                ↑ 6.3%
+
+                <span>vs last month</span>
+
+            </p>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="report-card">
+
+            <div class="card-top">
+
+                <div class="icon blue">
+
+                    <i class="fa-solid fa-book-open-reader"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Books Issued</h4>
+
+                    <h1>320</h1>
+
+                </div>
+
+            </div>
+
+            <p class="red-text">
+
+                ↓ 4.2%
+
+                <span>vs last month</span>
+
+            </p>
+
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="report-card">
+
+            <div class="card-top">
+
+                <div class="icon yellow">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Overdue Books</h4>
+
+                    <h1>28</h1>
+
+                </div>
+
+            </div>
+
+            <p class="red-text">
+
+                ↑ 12.0%
+
+                <span>vs last month</span>
+
+            </p>
+
+        </div>
+
+        <!-- Card 5 -->
+
+        <div class="report-card">
+
+            <div class="card-top">
+
+                <div class="icon pink">
+
+                    <i class="fa-solid fa-reply"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Returned Books</h4>
+
+                    <h1>300</h1>
+
+                </div>
+
+            </div>
+
+            <p class="green-text">
+
+                ↑ 5.7%
+
+                <span>vs last month</span>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CHART GRID ================= -->
+
+    <div class="chart-grid">
+
+        <!-- Left Chart -->
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <h3>Books Issued Trend</h3>
+
+                <select>
+
+                    <option>Last 30 Days</option>
+
+                </select>
+
+            </div>
+
+            <canvas id="issueChart" height="120"></canvas>
+
+        </div>
+
+        <!-- Right Pie Chart -->
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <h3>Top Categories</h3>
+
+                <select>
+
+                    <option>By Books Issued</option>
+
+                </select>
+
+            </div>
+
+            <div class="pie-layout">
+
+                <canvas id="categoryChart"
+                width="180"
+                height="180"></canvas>
+
+                <!-- Category List -->
+
+                <div class="category-list">
+
+                    <div class="category-item">
+
+                        <div class="left-category">
+
+                            <span class="dot purple-dot"></span>
+
+                            <span>Fiction</span>
+
+                        </div>
+
+                        <b>40% (128)</b>
+
+                    </div>
+
+                    <div class="category-item">
+
+                        <div class="left-category">
+
+                            <span class="dot green-dot"></span>
+
+                            <span>Self Help</span>
+
+                        </div>
+
+                        <b>20% (64)</b>
+
+                    </div>
+
+                    <div class="category-item">
+
+                        <div class="left-category">
+
+                            <span class="dot yellow-dot"></span>
+
+                            <span>Dystopian</span>
+
+                        </div>
+
+                        <b>15% (48)</b>
+
+                    </div>
+
+                    <div class="category-item">
+
+                        <div class="left-category">
+
+                            <span class="dot blue-dot"></span>
+
+                            <span>Finance</span>
+
+                        </div>
+
+                        <b>15% (48)</b>
+
+                    </div>
+
+                    <div class="category-item">
+
+                        <div class="left-category">
+
+                            <span class="dot gray-dot"></span>
+
+                            <span>Others</span>
+
+                        </div>
+
+                        <b>10% (32)</b>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= SUMMARY ================= -->
+
+    <div class="summary-card">
+
+        <h3>Summary</h3>
+
+        <div class="summary-grid">
+
+            <!-- Item 1 -->
+
+            <div class="summary-item">
+
+                <div class="icon purple">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <div>
+
+                    <p>Most Issued Book</p>
+
+                    <h4>The Great Gatsby</h4>
+
+                    <span>Issued 15 times</span>
+
+                </div>
+
+            </div>
+
+            <!-- Item 2 -->
+
+            <div class="summary-item">
+
+                <div class="icon green">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div>
+
+                    <p>Most Active Member</p>
+
+                    <h4>John Doe</h4>
+
+                    <span>Issued 8 books</span>
+
+                </div>
+
+            </div>
+
+            <!-- Item 3 -->
+
+            <div class="summary-item">
+
+                <div class="icon yellow">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <p>Most Overdue</p>
+
+                    <h4>Atomic Habits</h4>
+
+                    <span>Overdue 5 times</span>
+
+                </div>
+
+            </div>
+
+            <!-- Item 4 -->
+
+            <div class="summary-item">
+
+                <div class="icon pink">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                </div>
+
+                <div>
+
+                    <p>Average Issue Duration</p>
+
+                    <h4>12 Days</h4>
+
+                    <span>vs last month 10 Days ↑</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Settings</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        <i class="fa-solid fa-book-open"></i>
+
+        <div>
+            <h2>Smart Library</h2>
+            <span>Management System</span>
+        </div>
+
+    </div>
+
+    <!-- Menu -->
+
+    <ul class="menu">
+
+        <li>
+            <a href="index.html">
+                <i class="fa-solid fa-table-columns"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="books.html">
+                <i class="fa-solid fa-book"></i>
+                Books
+            </a>
+        </li>
+
+        <li>
+            <a href="members.html">
+                <i class="fa-solid fa-users"></i>
+                Members
+            </a>
+        </li>
+
+        <li>
+            <a href="issue_return.html">
+                <i class="fa-solid fa-right-left"></i>
+                Issue / Return
+            </a>
+        </li>
+
+        <li>
+            <a href="rfid_scan.html">
+                <i class="fa-solid fa-wifi"></i>
+                RFID Scan
+            </a>
+        </li>
+
+        <li>
+            <a href="transactions.html">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                Transactions
+            </a>
+        </li>
+
+        <li>
+            <a href="fines.html">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Fines
+            </a>
+        </li>
+
+        <li>
+            <a href="categories.html">
+                <i class="fa-solid fa-layer-group"></i>
+                Categories
+            </a>
+        </li>
+
+        <li>
+            <a href="users.html">
+                <i class="fa-solid fa-user"></i>
+                Users
+            </a>
+        </li>
+
+        <li>
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </li>
+
+    </ul>
+    <!-- Welcome Card -->
+
+    <div class="bottom-card">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+        <h3>Welcome Admin</h3>
+
+        <p>
+            Manage your library resources efficiently.
+        </p>
+
+        <button class="scan-btn">
+            <i class="fa-solid fa-wifi"></i>
+            Scan RFID
+        </button>
+
+
+    </div>
+    <!-- Logout -->
+
+    <div class="logout-btn"  id="logoutBtn">
+
+        <a href="logout.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="main-content">
+
+    <div class="top-navbar">
+
+        <div class="search-bar">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" placeholder="Search here...">
+
+        </div>
+
+    </div>
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <h1>Settings</h1>
+            <p>System settings and preferences</p>
+
+        </div>
+
+    </div>
+
+    <!-- SETTINGS -->
+
+    <div class="settings-container">
+
+        <!-- LEFT -->
+
+        <div class="settings-menu">
+
+            <button class="active-setting">General</button>
+
+            <button>Library Info</button>
+
+            <button>Email Settings</button>
+
+            <button>Backup</button>
+
+            <button>Security</button>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="settings-form">
+
+            <label>Library Name</label>
+
+            <input type="text" value="Smart Library">
+
+            <label>Library Address</label>
+
+            <input type="text" value="123 Library Street, Yangon">
+
+            <div class="double-input">
+
+                <div>
+
+                    <label>Phone</label>
+
+                    <input type="text" value="09-123456789">
+
+                </div>
+
+                <div>
+
+                    <label>Email</label>
+
+                    <input type="email" value="library@example.com">
+
+                </div>
+
+            </div>
+
+            <label>Timezone</label>
+
+            <select>
+                <option>Asia/Yangon</option>
+            </select>
+
+            <button class="save-btn">
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

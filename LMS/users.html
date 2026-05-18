@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Members</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        <i class="fa-solid fa-book-open"></i>
+
+        <div>
+            <h2>Smart Library</h2>
+            <span>Management System</span>
+        </div>
+
+    </div>
+
+    <!-- Menu -->
+
+    <ul class="menu">
+
+        <li>
+            <a href="index.html">
+                <i class="fa-solid fa-table-columns"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="books.html">
+                <i class="fa-solid fa-book"></i>
+                Books
+            </a>
+        </li>
+
+        <li>
+            <a href="members.html">
+                <i class="fa-solid fa-users"></i>
+                Members
+            </a>
+        </li>
+
+        <li>
+            <a href="issue_return.html">
+                <i class="fa-solid fa-right-left"></i>
+                Issue / Return
+            </a>
+        </li>
+
+        <li>
+            <a href="rfid_scan.html">
+                <i class="fa-solid fa-wifi"></i>
+                RFID Scan
+            </a>
+        </li>
+
+        <li>
+            <a href="transactions.html">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                Transactions
+            </a>
+        </li>
+
+        <li>
+            <a href="fines.html">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Fines
+            </a>
+        </li>
+
+        <li>
+            <a href="categories.html">
+                <i class="fa-solid fa-layer-group"></i>
+                Categories
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="users.html">
+                <i class="fa-solid fa-user"></i>
+                Users
+            </a>
+        </li>
+
+        <li>
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </li>
+
+    </ul>
+    <!-- Welcome Card -->
+
+    <div class="bottom-card">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+        <h3>Welcome Admin</h3>
+
+        <p>
+            Manage your library resources efficiently.
+        </p>
+
+        <button class="scan-btn">
+            <i class="fa-solid fa-wifi"></i>
+            Scan RFID
+        </button>
+    </div>
+
+    <!-- Logout -->
+
+    <div class="logout-btn"  id="logoutBtn">
+
+        <a href="logout.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<div class="main-content">
+
+    <!-- Top Navbar -->
+
+    <div class="top-navbar">
+
+        <div class="search-bar">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text"
+            placeholder="Search here...">
+
+        </div>
+
+        <div class="top-right">
+
+            <div class="notification">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>3</span>
+
+            </div>
+
+            <div class="admin-profile">
+
+                <img src="https://i.pravatar.cc/150?img=12">
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Librarian</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Members Header -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <h1>Users</h1>
+            <p>Manage system users</p>
+
+        </div>
+
+        <button class="add-btn">
+
+            <i class="fa-solid fa-plus"></i>
+            Add Member
+
+        </button>
+
+    </div>
+
+    <!-- Members Table -->
+
+    <div class="table-card">
+
+        <!-- Filter Bar -->
+
+        <div class="filter-bar">
+
+            <div class="filter-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text"
+                placeholder="Search users.....">
+
+            </div>
+
+            <select>
+                <option>All Roles</option>
+            </select>
+
+            <select>
+                <option>All Status</option>
+            </select>
+
+            <button class="clear-btn">
+                Clear
+            </button>
+
+        </div>
+
+        <!-- Table -->
+
+        <table>
+
+            <tr>
+
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+            <!-- Row 1 -->
+
+            <tr>
+
+                <td>U001</td>
+
+                <td class="member-info">
+
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+                    John Doe
+
+                </td>
+
+                <td>john@example.com</td>
+                <td>09-123456789</td>
+                <td>Administrator</td>
+                
+
+                <td>
+
+                    <span class="status available">
+                        Active
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <div class="action-buttons">
+
+                        <button class="edit-btn">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button class="delete-btn">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <!-- Row 2 -->
+
+            <tr>
+
+                <td>U002</td>
+
+                <td class="member-info">
+
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+                    Jane Smith
+
+                </td>
+
+                <td>jane@example.com</td>
+                <td>09-987654321</td>
+                <td>Librarian</td>
+                
+
+                <td>
+
+                    <span class="status available">
+                        Active
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <div class="action-buttons">
+
+                        <button class="edit-btn">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button class="delete-btn">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <!-- Row 3 -->
+
+            <tr>
+
+                <td>U003</td>
+
+                <td class="member-info">
+
+                    <img src="https://randomuser.me/api/portraits/men/55.jpg">
+
+                    Aung Kaung
+
+                </td>
+
+                <td>aung@example.com</td>
+                <td>09-444555666</td>
+                <td>Staff</td>
+                
+
+                <td>
+
+                    <span class="status issued">
+                        Inactive
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <div class="action-buttons">
+
+                        <button class="edit-btn">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button class="delete-btn">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

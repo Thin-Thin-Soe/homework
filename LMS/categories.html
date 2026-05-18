@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RFID Scan</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        <i class="fa-solid fa-book-open"></i>
+
+        <div>
+            <h2>Smart Library</h2>
+            <span>Management System</span>
+        </div>
+
+    </div>
+
+    <!-- Menu -->
+
+    <ul class="menu">
+
+        <li>
+            <a href="index.html">
+                <i class="fa-solid fa-table-columns"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="books.html">
+                <i class="fa-solid fa-book"></i>
+                Books
+            </a>
+        </li>
+
+        <li>
+            <a href="members.html">
+                <i class="fa-solid fa-users"></i>
+                Members
+            </a>
+        </li>
+
+        <li>
+            <a href="issue_return.html">
+                <i class="fa-solid fa-right-left"></i>
+                Issue / Return
+            </a>
+        </li>
+
+        <li>
+            <a href="rfid_scan.html">
+                <i class="fa-solid fa-wifi"></i>
+                RFID Scan
+            </a>
+        </li>
+
+        <li>
+            <a href="transactions.html">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                Transactions
+            </a>
+        </li>
+
+        <li>
+            <a href="fines.html">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Fines
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="categories.html">
+                <i class="fa-solid fa-layer-group"></i>
+                Categories
+            </a>
+        </li>
+
+        <li>
+            <a href="users.html">
+                <i class="fa-solid fa-user"></i>
+                Users
+            </a>
+        </li>
+
+        <li>
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </li>
+
+    </ul>
+    <!-- Welcome Card -->
+
+    <div class="bottom-card">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+        <h3>Welcome Admin</h3>
+
+        <p>
+            Manage your library resources efficiently.
+        </p>
+
+        <button class="scan-btn">
+            <i class="fa-solid fa-wifi"></i>
+            Scan RFID
+        </button>
+
+
+    </div>
+    <!-- Logout -->
+
+    <div class="logout-btn" id="logoutBtn">
+
+        <a href="logout.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+    <!-- Top Navbar -->
+
+    <div class="top-navbar">
+
+        <div class="search-bar">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text"
+            placeholder="Search books, members, ...">
+
+        </div>
+
+        <div class="top-right">
+
+            <div class="notification">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>3</span>
+
+            </div>
+
+            <div class="admin-profile">
+
+                <img src="https://i.pravatar.cc/150?img=12">
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Librarian</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- RFID Scan Header -->
+    <div class="dashboard-header">
+
+        <div>
+            <h1>Categories</h1>
+            <p>Manage book categories</p>
+        </div>
+
+    </div>
+
+    <div class="table-card">
+
+        <table>
+
+            <tr>
+                <th>Category ID</th>
+                <th>Category Name</th>
+                <th>Description</th>
+                <th>Total Books</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>C001</td>
+                <td>Fiction</td>
+                <td>Fictional stories and novels</td>
+                <td>980</td>
+
+                <td>
+                    <span class="status available">
+                        Active
+                    </span>
+                </td>
+                <td>
+
+                    <div class="action-buttons">
+
+                        <button class="edit-btn">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button class="delete-btn">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>C002</td>
+                <td>Self Help</td>
+                <td>Self improvement books</td>
+                <td>620</td>
+
+                <td>
+                    <span class="status available">
+                        Active
+                    </span>
+                </td>
+                <td>
+
+                    <div class="action-buttons">
+
+                        <button class="edit-btn">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button class="delete-btn">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

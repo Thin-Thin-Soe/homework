@@ -1,0 +1,238 @@
+/* ================= TOP CATEGORIES ================= */
+
+const categoryCtx = document.getElementById("categoryChart");
+
+if(categoryCtx){
+
+    new Chart(categoryCtx, {
+
+        type: "doughnut",
+
+        data: {
+
+            labels: [
+                "Fiction",
+                "Self Help",
+                "Dystopian",
+                "Finance",
+                "Others"
+            ],
+
+            datasets: [{
+
+                data: [40, 20, 15, 15, 10],
+
+                backgroundColor: [
+
+                    "#6c4cff",
+                    "#24b35a",
+                    "#f0b429",
+                    "#4285f4",
+                    "#d6d6d6"
+
+                ],
+
+                borderWidth: 0
+
+            }]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            cutout: "68%",
+
+            plugins: {
+
+                legend: {
+                    display: false
+                },
+
+                /* ================= PERCENT LABEL ================= */
+
+                datalabels: {
+
+                    color: "#fff",
+
+                    font: {
+
+                        weight: "bold",
+                        size: 12
+
+                    },
+
+                    formatter: (value) => {
+
+                        return value + "%";
+
+                    }
+
+                }
+
+            }
+
+        },
+
+        plugins: [ChartDataLabels]
+
+    });
+
+}
+
+<div class="report-card">
+
+            <div class="card-top">
+
+                <div class="icon purple">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Total Books</h4>
+
+                    <h1>2,450</h1>
+
+                </div>
+
+            </div>
+
+            <p class="green-text">
+
+                ↑ 8.5%
+
+                <span>vs last month</span>
+
+            </p>
+
+        </div>
+
+
+
+
+        * ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f7fc;
+    overflow:hidden;
+}
+
+/* ================= LOGOUT CONTAINER ================= */
+
+.logout-container{
+    width:420px;
+    background:white;
+    padding:45px 35px;
+    border-radius:24px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+
+    animation:fadeIn 0.5s ease;
+}
+
+/* ================= ICON ================= */
+
+.logout-icon{
+    width:110px;
+    height:110px;
+
+    margin:auto;
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    background:#fee2e2;
+    color:#ef4444;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:45px;
+}
+
+/* ================= TEXT ================= */
+
+.logout-container h1{
+    color:#111827;
+    margin-bottom:15px;
+    font-size:32px;
+}
+
+.logout-container p{
+    color:#6b7280;
+    line-height:1.7;
+    margin-bottom:35px;
+    font-size:15px;
+}
+
+/* ================= BUTTON ================= */
+
+.login-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+
+    background:#2563eb;
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    transition:0.3s;
+    font-size:15px;
+}
+
+.login-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:500px){
+
+    .logout-container{
+        width:90%;
+        padding:35px 25px;
+    }
+
+    .logout-container h1{
+        font-size:26px;
+    }
+
+}
